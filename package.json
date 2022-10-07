@@ -19,7 +19,9 @@
     "lint": "./node_modules/.bin/eslint lib/**.js",
     "semantic-release": "semantic-release",
     "test": "./node_modules/.bin/lab test",
-    "type-check": "tsc --noEmit"
+    "type-check": "tsc --noEmit",
+    "prepare": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "husky": {
     "hooks": {
@@ -43,13 +45,14 @@
     "@hapi/cookie": "^10.1.0",
     "@hapi/inert": "^5.2.0",
     "@hapi/joi": "^15.0.3",
-    "@hapi/vision": "^5.5.2",
-    "async": "^3.0.1",
-    "azure-devops-node-api": "^9.0.1",
+    "@hapi/vision": "^5.5.3",
+    "async": "^3.2.2",
+    "azure-devops-node-api": "^10.2.2",
     "bassmaster": "^3.2.0",
-    "handlebars": "^4.1.2",
-    "hapi-swagger": "^10.0.2",
-    "lodash": "^4.17.11"
+    "handlebars": "^4.7.7",
+    "hapi-swagger": "^14.2.5",
+    "lodash": "^4.17.21",
+    "@snyk/protect": "latest"
   },
   "devDependencies": {
     "@babel/cli": "^7.4.4",
@@ -88,5 +91,6 @@
       "dependencyPin": "chore(greenkeeper): Fix: Pin ${dependency} to ${oldVersion}",
       "devDependencyPin": "chore(greenkeeper): Fix: Pin ${dependency} to ${oldVersion}"
     }
-  }
+  },
+  "snyk": true
 }
